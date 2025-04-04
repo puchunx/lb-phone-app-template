@@ -29,13 +29,19 @@ onMounted(() => {
 <style scoped>
 .phone-frame {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 
-  width: 92%;
-  height: 98%;
+  width: 27.6rem;
+  height: 59rem;
 
-  border-radius: 60px;
+  /* width: 92%;
+    height: 98%; */
+
+  border-radius: 3.75rem;
+  background-color: black;
   box-shadow: 0 0 0.1em 0.25em #050506, 0 0 0 0.4em hsl(254, 30%, 85%);
+
+  z-index: 2;
 }
 
 .phone-content {
@@ -47,7 +53,7 @@ onMounted(() => {
   justify-content: center;
 
   overflow: hidden;
-  border-radius: 60px;
+  border-radius: 3.75rem;
 }
 
 .phone-notch {
@@ -61,7 +67,7 @@ onMounted(() => {
   width: 30%;
   background-color: black;
 
-  border-radius: 25px;
+  border-radius: 1.6rem;
   cursor: pointer;
 }
 

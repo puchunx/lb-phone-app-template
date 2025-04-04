@@ -187,19 +187,21 @@ const remove = (url: string, blob: Blob) => {
 <template>
   <div>
     <AppProvider :devMode="devMode">
-      <div class="app-wrapper">
-        <Header></Header>
-        <div class="button-wrapper">
-          <button @click="showPopupMenu">Popup Menu</button>
-          <button @click="showContextMenu">Context menu</button>
-          <button @click="selectGIFHandler">Gif Selector</button>
-          <button @click="selectGalleryHandler">Gallery Selector</button>
-          <button @click="selectEmojiHandler">Emoji Selector</button>
-          <button @click="colorPickerHandler">Color Picker</button>
-          <button @click="useCameraHandler">Camera Component</button>
-          <button @click="gameRender = !gameRender"></button>
-          <GameRender v-if="gameRender" :remove="remove"></GameRender>
-          <input placeholder="Notification text" v-model="notificationText" />
+      <div class="app">
+        <div class="app-wrapper">
+          <Header></Header>
+          <div class="button-wrapper">
+            <button @click="showPopupMenu">Popup Menu</button>
+            <button @click="showContextMenu">Context menu</button>
+            <button @click="selectGIFHandler">Gif Selector</button>
+            <button @click="selectGalleryHandler">Gallery Selector</button>
+            <button @click="selectEmojiHandler">Emoji Selector</button>
+            <button @click="colorPickerHandler">Color Picker</button>
+            <button @click="useCameraHandler">Camera Component</button>
+            <button @click="gameRender = !gameRender">Game render</button>
+            <GameRender v-if="gameRender" :remove="remove"></GameRender>
+            <input placeholder="Notification text" v-model="notificationText" />
+          </div>
         </div>
       </div>
     </AppProvider>
